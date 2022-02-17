@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - Map App</title>
+    <style>
+        nav a {
+            color: #9db454;
+            font-size: 3em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a>Map App</a>
+    </nav>
+    <hr>
+    <form method="POST" action = "/send_data">
+        <div class = "form-group">
+            <p align="center">Please, type the user_name in the field below</p>
+            <p align="center"><input type="text" name = "user"></p>
+            <p align="center">And don't touch the button until the textfield is clear</p>
+        </div>
+    </form>
+    <form method="POST" action = "/send_data/Friends">
+        <p align="center">To see your map press the button</p>
+        <p align="center"><a href=Friends.html ><button class=grey, style="height:250px;width:250px;background-color:#85b549; border-radius: 100%; font-size:40px; color:#f1eded">Friends</button></a></p>
+    </form>
+        <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
